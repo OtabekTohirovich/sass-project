@@ -1,9 +1,9 @@
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 15px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
@@ -20,21 +20,61 @@
   border-radius: 4px;
 }
 
+
 .btn__primary {
   @extend .btn;
-  color: #fff;
-  background-color: $mainBlue;
-  border-color: #2e6da4;
-  &:hover {
-    background: #2e6da4;
-  }
-}
-.btn__secondary {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
   &:hover {
-    background: #2e6da4;
+    background: #16548a;
+    color: #ffff;
+  }
+}
+.btn__danger {
+  @extend .btn;
+  color: #fff;
+  background-color: #c33c54;
+  border-color: #c33c54;
+  &:hover {
+    background: #9e142d;
+    color: #fff
+  }
+}
+.btn__success {
+  @extend .btn;
+  color: #fff;
+  background-color: #09ca29;
+  border-color: #09ca29;
+  &:hover {
+    background: $mainGreenhover;
+  }
+}
+.btn__outlined {
+  @extend .btn;
+  color: #fff;
+  background-color: transparent;
+  border-color: $mainWhite;
+  &:hover {
+    background: $mainWhite;
+  }
+}
+.btn__secondary {
+  @extend .btn;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  &:hover {
+    background: #16548a;
+  }
+}
+.btn__secondary {
+  @extend .btn;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  &:hover {
+    background: #16548a;
   }
 }
 .btn-header__first{
@@ -60,7 +100,7 @@
   box-shadow: 0px 0px 24px rgba(27, 22, 66, 0.04);
   border-radius: 7.2px;  
   &:hover {
-    background: transparent;
+    background: $mainRedHover;
     border-color: #fff;
     color: $mainWhite;
   }
