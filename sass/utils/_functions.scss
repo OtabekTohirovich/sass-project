@@ -1,0 +1,17 @@
+@function myFunc($a: 1, $b: 1) {
+  @return $a * $b;
+}
+@function invert($color, $amount: 100%) {
+  $inverse: change-color($color, $hue: hue($color) + 180);
+  @return mix($inverse, $color, $amount);
+}
+
+@function maktabGaBorish($a, $b) {
+  @if $a == $b {
+    @return "Bilmay qoldim";
+  } @else if $a > $b {
+    @return "Maktabga borish";
+  } @else {
+    @return "Maktabga bormayman";
+  }
+}

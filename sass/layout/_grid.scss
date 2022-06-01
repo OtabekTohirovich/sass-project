@@ -1,0 +1,42 @@
+@use "sass:math";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 0 0 100%;
+}
+
+
+
+@for $i from 1 through $gridColumns {
+  .col-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: math.div(100%, $gridColumns) * $i;
+  }
+}
+
+
+@each $mq in (sm, md, lg, xl, xxl) {
+  @media screen and (min-width: map-get($breakpoints, $mq)) {
+    @for $i from 1 through $gridColumns {
+      .col-#{$mq}-#{$i} {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: math.div(100%, $gridColumns) * $i;
+      }
+    }
+  }
+}
+@each $mq in (sm, md, lg, xl, xxl) {
+  @media screen and (min-width: map-get($breakpoints, $mq)) {
+    @for $i from 0 through $spacingCount {
+      .m-#{$mq}-#{$i} {
+        margin: $i * 0.75rem;
+      }
+    }
+  }
+}
