@@ -725,12 +725,12 @@ body {
     margin: 4.5rem;
   }
 }
-.btn, .btn__primary {
+.btn, .btn__secondary, .btn__outlined, .btn__success, .btn__danger, .btn__primary {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 8px 15px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
@@ -749,11 +749,40 @@ body {
 
 .btn__primary {
   color: #fff;
-  background-color: #0d1b48;
+  background-color: #337ab7;
   border-color: #2e6da4;
 }
 .btn__primary:hover {
-  background: #2e6da4;
+  background: #16548a;
+  color: white;
+}
+
+.btn__danger {
+  color: #fff;
+  background-color: #c33c54;
+  border-color: #c33c54;
+}
+.btn__danger:hover {
+  background: #9e142d;
+  color: #fff;
+}
+
+.btn__success {
+  color: #fff;
+  background-color: #09ca29;
+  border-color: #09ca29;
+}
+.btn__success:hover {
+  background: #05a21f;
+}
+
+.btn__outlined {
+  color: #fff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.btn__outlined:hover {
+  background: #ffffff;
 }
 
 .btn__secondary {
@@ -762,7 +791,16 @@ body {
   border-color: #2e6da4;
 }
 .btn__secondary:hover {
-  background: #2e6da4;
+  background: #16548a;
+}
+
+.btn__secondary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn__secondary:hover {
+  background: #16548a;
 }
 
 .btn-header__first {
@@ -790,7 +828,7 @@ body {
   border-radius: 7.2px;
 }
 .btn-header__last:hover {
-  background: transparent;
+  background: #c3354f;
   border-color: #fff;
   color: #ffffff;
 }
